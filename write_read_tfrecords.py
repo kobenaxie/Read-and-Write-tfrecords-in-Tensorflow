@@ -32,7 +32,7 @@ def write_tfRecord(data=None, label=None, file_name='test.tfrecord'):
     with tf.python_io.TFRecordWriter(file_name) as writer:
         for i in range(10):
             # prepare data and label
-            data = np.ones((50, 100, 3), dtype=uint8) # np.ndarray
+            data = np.ones((50, 100, 3), dtype=np.uint8) # np.ndarray
             label = list(np.arange(i+1)) # list of int
             
             features = {} # each example has these features
